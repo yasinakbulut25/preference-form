@@ -10,7 +10,8 @@ function InputField({ label = "", type = "text", classNames, ...rest }) {
       radius="sm"
       labelPlacement="outside-top"
       classNames={{
-        label: "font-medium text-color-secondary pb-1",
+        label:
+          "font-medium text-color-secondary group-data-[invalid=true]:text-color-secondary! text-sm pb-1",
         input: [
           "bg-white text-base text-slate-900 font-medium",
           "placeholder:text-base placeholder:text-color-light font-medium",
@@ -20,6 +21,7 @@ function InputField({ label = "", type = "text", classNames, ...rest }) {
           "p-3 h-auto rounded-xl",
           "bg-white border-2 border-border-default shadow-none",
           "data-[hover=true]:bg-white",
+          "group-data-[invalid=true]:bg-white! group-data-[invalid=true]:hover:bg-white!",
           "group-data-[focus=true]:bg-white",
         ],
         ...classNames,

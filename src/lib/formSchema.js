@@ -7,8 +7,6 @@ export const EmailFrequencyEnum = z.enum([
   "ALWAYS",
 ]);
 
-const UK_POSTCODE_REGEX = /^[A-Z]{1,2}\d[A-Z\d]? \d[A-Z]{2}$/i;
-
 export const preferenceFormSchema = z
   .object({
     email: z.email("Please enter a valid email address."),
@@ -34,7 +32,8 @@ export const preferenceFormSchema = z
 
     postcode: z
       .string()
-      .regex(UK_POSTCODE_REGEX, "Please enter a valid UK postcode"),
+      .min(2, "must be at least 2 characters")
+      .max(6, "can be max 6 characters"),
 
     cities: z
       .array(z.string())

@@ -13,6 +13,7 @@ function SelectField({
   isInvalid = false,
   errorMessage,
   classNames,
+  coloredPlaceholder = false,
   ...rest
 }) {
   return (
@@ -27,7 +28,8 @@ function SelectField({
       isInvalid={isInvalid}
       errorMessage={errorMessage}
       classNames={{
-        label: "font-medium text-color-secondary pb-1",
+        label:
+          "font-medium text-color-secondary group-data-[invalid=true]:text-color-secondary! text-sm pb-1",
         trigger: [
           "p-3 h-auto rounded-xl cursor-pointer",
           "bg-white border-2 border-border-default shadow-none",
@@ -35,7 +37,7 @@ function SelectField({
           "group-data-[focus=true]:bg-white",
         ],
         value: [
-          "text-base text-color-primary font-normal",
+          `text-base ${coloredPlaceholder ? "text-color-primary" : "text-color-light"} font-medium`,
           "group-data-[has-value=true]:text-slate-900",
         ],
         popoverContent: "bg-white border border-border-default",
