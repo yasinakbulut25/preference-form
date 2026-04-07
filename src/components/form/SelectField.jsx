@@ -29,7 +29,7 @@ function SelectField({
       errorMessage={errorMessage}
       classNames={{
         label:
-          "font-medium text-color-secondary group-data-[invalid=true]:text-color-secondary! text-sm pb-1",
+          "font-medium text-color-secondary! group-data-[invalid=true]:text-color-secondary! text-sm pb-1",
         trigger: [
           "p-3 h-auto rounded-xl cursor-pointer",
           "bg-white border-2 border-border-default shadow-none",

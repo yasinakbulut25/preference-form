@@ -3,6 +3,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import InputField from "@/components/form/InputField";
 import DateOfBirthFields from "./DateOfBirthFields";
 import CitySelectField from "./CitySelectField";
+import SectionLine from "@/components/ui/SectionLine";
 
 function PersonalSection() {
   const {
@@ -54,6 +55,8 @@ function PersonalSection() {
           <CitySelectField />
         </div>
       </div>
+
+      <SectionLine />
     </section>
   );
 }
