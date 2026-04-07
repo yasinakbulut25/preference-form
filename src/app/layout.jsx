@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${arimo.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-color-bg">
+      <body className="min-h-full bg-color-bg font-sans">
         <ClientProvider>{children}</ClientProvider>
       </body>
     </html>

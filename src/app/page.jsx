@@ -1,12 +1,9 @@
-"use client";
-
-import { Button } from "@heroui/react";
+import PreferenceForm from "@/components/preference-form/PreferenceForm";
 
 export default function Home() {
   return (
-    <main>
-      <Button color="primary">Hero UI Test</Button>
-      <p>Personal Information</p>
+    <main className="p-4">
+      <PreferenceForm />
     </main>
   );
 }

@@ -5,5 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  --font-sans: "Arimo", sans-serif;
+
   --color-color-bg: #faf3d5;
+  --color-color-primary: #018557;
+  --color-color-secondary: #154733;
+
+  --color-border-default: #e0e0e0;
+  --color-border-section: #f5efd1;
 }
