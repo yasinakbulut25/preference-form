@@ -1,6 +1,6 @@
 import { Controller, useFormContext } from "react-hook-form";
 import SelectField from "@/components/form/SelectField";
-import { days, months, years } from "@/utils/dateOptions";
+import { DAYS, MONTHS, YEARS } from "@/utils/dateOptions";
 
 function DateOfBirthFields() {
   const {
@@ -21,7 +21,7 @@ function DateOfBirthFields() {
             <SelectField
               placeholder="Days"
               coloredPlaceholder
-              options={days}
+              options={DAYS}
               selectedKeys={
                 field.value ? new Set([String(field.value)]) : new Set()
               }
@@ -42,7 +42,7 @@ function DateOfBirthFields() {
             <SelectField
               placeholder="Month"
               coloredPlaceholder
-              options={months}
+              options={MONTHS}
               selectedKeys={
                 field.value ? new Set([String(field.value)]) : new Set()
               }
@@ -63,7 +63,7 @@ function DateOfBirthFields() {
             <SelectField
               placeholder="Year"
               coloredPlaceholder
-              options={years}
+              options={YEARS}
               selectedKeys={
                 field.value ? new Set([String(field.value)]) : new Set()
               }
