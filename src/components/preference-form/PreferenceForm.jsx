@@ -4,12 +4,12 @@ import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { preferenceFormSchema } from "@/lib/formSchema";
 import SubmitButton from "@/components/form/SubmitButton";
-import PersonalSection from "./PersonalSection";
+import PersonalSection from "./personal-section/PersonalSection";
 
 function PreferenceForm() {
   const methods = useForm({
     resolver: zodResolver(preferenceFormSchema),
-    mode: "onChange",
+    mode: "onBlur",
     defaultValues: {
       email: "",
       firstName: "",
