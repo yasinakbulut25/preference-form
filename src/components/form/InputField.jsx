@@ -18,8 +18,8 @@ function InputField({ label = "", type = "text", classNames, ...rest }) {
         ],
         innerWrapper: "bg-transparent",
         inputWrapper: [
-          "p-3 h-auto rounded-xl",
           "bg-white border-2 border-border-default shadow-none",
+          `${rest?.size === "sm" ? "p-2" : "p-3"} h-auto rounded-xl`,
           "data-[hover=true]:bg-white",
           "group-data-[invalid=true]:bg-white! group-data-[invalid=true]:hover:bg-white!",
           "group-data-[focus=true]:bg-white",
