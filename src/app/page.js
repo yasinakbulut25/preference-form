@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <main>
       <Button color="primary">Hero UI Test</Button>
+      <p>Personal Information</p>
     </main>
   );
 }
