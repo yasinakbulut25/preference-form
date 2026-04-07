@@ -1,5 +1,11 @@
+"use client";
+
+import { Button } from "@heroui/react";
+
 export default function Home() {
   return (
-    <main className="text-red-400">Main</main>
+    <main>
+      <Button color="primary">Hero UI Test</Button>
+    </main>
   );
 }
