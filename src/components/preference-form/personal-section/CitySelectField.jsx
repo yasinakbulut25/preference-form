@@ -49,7 +49,6 @@ function CitySelectField() {
             if (selectedValues.length > 3) return;
             field.onChange(selectedValues);
           }}
-          onBlur={field.onBlur}
           isLoading={loading}
           isInvalid={!!errors.cities}
           errorMessage={errors.cities?.message}
