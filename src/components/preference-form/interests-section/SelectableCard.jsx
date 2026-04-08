@@ -22,7 +22,7 @@ export default function SelectableCard({
     >
       <CardBody className="flex flex-row items-center justify-center p-4 relative min-h-16">
         {Icon && (
-          <div className="absolute left-4">
+          <div className="absolute left-6">
             <Icon
               size={20}
               className={isSelected ? "text-white" : "text-color-primary"}
@@ -30,7 +30,7 @@ export default function SelectableCard({
           </div>
         )}
 
-        <span className={`font-medium text-sm sm:text-base ${labelClass}`}>
+        <span className={`font-normal text-sm sm:text-base ${labelClass}`}>
           {label}
         </span>
 

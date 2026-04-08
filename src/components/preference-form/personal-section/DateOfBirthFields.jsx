@@ -19,7 +19,7 @@ function DateOfBirthFields() {
           control={control}
           render={({ field }) => (
             <SelectField
-              placeholder="Days"
+              placeholder="Day"
               coloredPlaceholder
               options={DAYS}
               selectedKeys={

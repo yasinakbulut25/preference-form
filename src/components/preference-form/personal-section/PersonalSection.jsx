@@ -15,7 +15,7 @@ function PersonalSection() {
     <section className="flex flex-col gap-6">
       <SectionTitle title="Personal Information" />
 
-      <div className="grid md:grid-cols-2 gap-4 mt-6 items-start">
+      <div className="grid md:grid-cols-2 gap-4 items-start">
         <InputField
           label="Email Address"
           {...register("email")}

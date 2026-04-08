@@ -67,7 +67,7 @@ function FootballTeams() {
                         label={team.label}
                         isSelected={teamField.value === team.id}
                         onClick={() => teamField.onChange(team.id)}
-                        labelClass="py-6"
+                        labelClass="py-6 font-medium!"
                       />
                     ))}
                   </div>

@@ -31,7 +31,8 @@ export default function InterestSection() {
       />
 
       <p className="text-sm font-bold text-color-primary text-center">
-        {selectedInterests.length}/{INTEREST_OPTIONS.length} interests selected
+        <span className="text-slate-900">{selectedInterests.length}</span>/
+        {INTEREST_OPTIONS.length} interests selected
       </p>
 
       <Controller
