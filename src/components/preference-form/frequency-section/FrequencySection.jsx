@@ -44,6 +44,7 @@ function FrequencySection() {
                 isInvalid={!!errors.emailFrequency}
                 errorMessage={errors.emailFrequency?.message}
                 className="items-center"
+                aria-label="Select Email Frequency"
               />
             );
           }}

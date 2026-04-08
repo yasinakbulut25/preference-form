@@ -44,6 +44,7 @@ function SelectField({
         listbox: "p-1",
         ...classNames,
       }}
+      aria-label={placeholder}
       {...rest}
     >
       {options.map((item) => (
