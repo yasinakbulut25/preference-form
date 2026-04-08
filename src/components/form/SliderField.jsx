@@ -1,4 +1,5 @@
 import { Slider } from "@heroui/react";
+import ErrorMessage from "@/components/ui/ErrorMessage";
 
 function SliderField({
   value,
@@ -40,9 +41,7 @@ function SliderField({
       />
 
       <p className="text-base text-color-primary font-bold">{displayLabel}</p>
-      {isInvalid && errorMessage && (
-        <span className="text-tiny text-danger">{errorMessage}</span>
-      )}
+      {isInvalid && errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useFormContext, Controller, useWatch } from "react-hook-form";
 import { INTEREST_OPTIONS } from "@/utils/constants";
 import SectionTitle from "@/components/ui/SectionTitle";
+import ErrorMessage from "@/components/ui/ErrorMessage";
 import SelectableCard from "./SelectableCard";
 import FootballTeams from "./FootballTeams";
 
@@ -60,9 +61,7 @@ export default function InterestSection() {
         )}
       />
       {errors.interests && (
-        <span className="text-danger text-sm mt-2">
-          {errors.interests.message}
-        </span>
+        <ErrorMessage>{errors.interests.message}</ErrorMessage>
       )}
 
       {isFootballSelected && <FootballTeams />}

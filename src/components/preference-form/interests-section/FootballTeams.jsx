@@ -1,5 +1,6 @@
 import { useFormContext, Controller } from "react-hook-form";
 import SectionTitle from "@/components/ui/SectionTitle";
+import ErrorMessage from "@/components/ui/ErrorMessage";
 import { FOOTBALL_DATA } from "@/utils/constants";
 import SelectableCard from "./SelectableCard";
 
@@ -49,9 +50,7 @@ function FootballTeams() {
             </div>
 
             {errors.footballLeague && (
-              <span className="text-danger text-sm mt-2">
-                {errors.footballLeague.message}
-              </span>
+              <ErrorMessage>{errors.footballLeague.message}</ErrorMessage>
             )}
 
             <Controller
@@ -75,10 +74,9 @@ function FootballTeams() {
                 );
               }}
             />
+
             {errors.footballTeam && (
-              <span className="text-danger text-sm mt-4 text-center">
-                {errors.footballTeam.message}
-              </span>
+              <ErrorMessage>{errors.footballTeam.message}</ErrorMessage>
             )}
           </>
         )}
