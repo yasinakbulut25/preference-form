@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { preferenceFormSchema } from "@/lib/formSchema";
 import SubmitButton from "@/components/form/SubmitButton";
 import PersonalSection from "./personal-section/PersonalSection";
+import FrequencySection from "./frequency-section/FrequencySection";
 
 function PreferenceForm() {
   const methods = useForm({
@@ -31,10 +32,12 @@ function PreferenceForm() {
   return (
     <FormProvider {...methods}>
       <form
-        className="w-full flex flex-col sm:gap-8 gap-6"
+        className="w-full flex flex-col"
         onSubmit={methods.handleSubmit(onSubmit)}
       >
         <PersonalSection />
+
+        <FrequencySection />
 
         <SubmitButton>Submit Preferences</SubmitButton>
       </form>
