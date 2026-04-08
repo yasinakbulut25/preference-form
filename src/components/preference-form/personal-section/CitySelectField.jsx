@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { useCities } from "@/hooks/useCities";
+import { useDebounce } from "@/hooks/useDebounce";
 import SelectField from "@/components/form/SelectField";
 import InputField from "@/components/form/InputField";
 
@@ -14,12 +15,14 @@ function CitySelectField() {
 
   const [searchTerm, setSearchTerm] = useState("");
 
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
+
   const filteredOptions = useMemo(() => {
     if (!cities) return [];
 
-    const filtered = searchTerm
+    const filtered = debouncedSearchTerm
       ? cities.filter((city) =>
-          city.toLowerCase().includes(searchTerm.toLowerCase()),
+          city.toLowerCase().includes(debouncedSearchTerm.toLowerCase()),
         )
       : cities;
 
@@ -27,7 +30,7 @@ function CitySelectField() {
       label: city,
       value: city,
     }));
-  }, [cities, searchTerm]);
+  }, [cities, debouncedSearchTerm]);
 
   return (
     <Controller
