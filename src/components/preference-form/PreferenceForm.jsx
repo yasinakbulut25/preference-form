@@ -6,6 +6,7 @@ import { preferenceFormSchema } from "@/lib/formSchema";
 import SubmitButton from "@/components/form/SubmitButton";
 import PersonalSection from "./personal-section/PersonalSection";
 import FrequencySection from "./frequency-section/FrequencySection";
+import InterestSection from "./interests-section/InterestsSection";
 
 function PreferenceForm() {
   const methods = useForm({
@@ -38,6 +39,8 @@ function PreferenceForm() {
         <PersonalSection />
 
         <FrequencySection />
+
+        <InterestSection />
 
         <SubmitButton>Submit Preferences</SubmitButton>
       </form>
